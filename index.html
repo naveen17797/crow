@@ -29,7 +29,8 @@
     </nav>
 
 <div class="col-xs-12"><br/><br/></div>
-<div class="offset-md-1 col-lg-9 col-sm-9 col-md-9" ng-controller="blogCtrl">
+<div class="row">
+<div class=" col-lg-9 col-sm-9 col-md-9" ng-controller="blogCtrl">
   <div ng-repeat="x in posts">
   	<div class="card mb-4">
             <div class="card-body">
@@ -38,18 +39,30 @@
             </div>
             <div class="card-footer text-muted">
               published on {{x.date_created}} by
-              <a href="#">{{x.author}}</a>
-              <b class="offset-md-1 text-right">
-              Tags : {{x.tags}}
-              </b>
-               <a href="" class="btn btn-primary offset-md-3" ng-click = "limit = x.description.length; read_more= 'Read Less';">{{read_more}} &rarr;</a>
+              <a ng-href="{{x.author_url}}">{{x.author}}</a>
+               <a href="" class="btn btn-primary offset-md-3" ng-hide="open" ng-click = "limit = x.description.length; read_more= 'Read Less'; open = true; ">{{read_more}} &rarr;</a>
             </div>
         </div>
   </div>
-
 </div>
 
+<!--BLOG SIDE BAR -->
+<div class=" col-lg-3 col-md-3 col-sm-3" ng-controller="sideBarCtrl">
+    <div ng-repeat="(key, value) in sideBarItems">
+         <div ng-bind-html="sideBarItems[key] | trustAsHtml "></div>
+    </div>
+</div>
 
+</div>
+<div class="container bg-dark col-lg-12 col-md-12 col-sm-12">
+
+        <div class="text-center center-block footer">
+          <p>
+           powered by <a href="https://github.com/naveen17797/crow" style="color: white;">Crow CMS</a>
+          </p>
+        </div>
+
+</div>
 <script type="text/javascript" src="angular.min.js"></script>
 <script type="text/javascript">
 	var app = angular.module("crow", []);
@@ -93,6 +106,7 @@
          $scope.posts = $response.data;
          $scope.limit = 500;
          $scope.read_more = "Read More";
+         $scope.open = false;
       
       }  
 
@@ -101,10 +115,17 @@
     });
 
      app.filter('trustAsHtml',['$sce', function($sce) {
-    return function(text) {
+      return function(text) {
       return $sce.trustAsHtml(text);
     };
   }]);
+
+     app.controller('sideBarCtrl', function ($scope, $http) {
+         var displaySideBarItems = function (response) {
+            $scope.sideBarItems = response.data;
+         }
+         $http.get("cr_sidebar.json").then(displaySideBarItems);
+     });
 
 </script>
 </html>
