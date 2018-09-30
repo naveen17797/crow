@@ -11,3 +11,12 @@ code {
 	color:  white;
 	padding: 30px;
 }
+
+@font-face {
+	font-family: "ubuntu-l";
+	src: url("../fonts/ubuntu.ttf");
+}
+
+html,body {
+	font-family: ubuntu-l;
+}
