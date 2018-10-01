@@ -23,5 +23,8 @@ Now navigate to the https://yourgithubusername.github.io, you should be able to 
 2.To setup crow web client you need to generate a github user access token with scope public_repo (dont panic if you have never heard the term, a brief video tutorial is available [here] (https://naveen17797.github.io/)
 3.Follow the steps in this [blog] (https://naveen17797.github.io/) which is also powered by crow, in case of any doubts, bugs, or vulnerabilities feel free to open a issue, or even send a patch through pull request.
 
-### SCREENSHOTS
+### SCREENSHOTS FROM CROW-WEB-CLIENT
+![screenshot from 2018-10-01 12-36-46](https://user-images.githubusercontent.com/18109258/46274353-c531fb00-c576-11e8-963d-0e05308cf09e.png)
+![screenshot from 2018-10-01 12-36-31](https://user-images.githubusercontent.com/18109258/46274354-c5ca9180-c576-11e8-9471-fcfb1987589c.png)
+![screenshot from 2018-10-01 12-33-30](https://user-images.githubusercontent.com/18109258/46274355-c5ca9180-c576-11e8-9fef-47e78288bab8.png)
 
