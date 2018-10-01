@@ -5,7 +5,7 @@ Crow is an content management system without any database which uses github page
 0.0.1 beta
 
 ### LIVE DEMO
-[https://naveen17797.github.io/](https://naveen17797.github.io/)
+[Naveens Lab](https://naveen17797.github.io/)
 
 ### REQUIREMENTS
 1.Local Host
@@ -20,8 +20,8 @@ Crow is an content management system without any database which uses github page
 
 ### WHAT TO DO NEXT?
 * You need to download [crow web client](https://github.com/naveen17797/crow-web-client) to edit your blog
-* To setup crow web client you need to generate a github user access token with scope public_repo (dont panic if you have never heard the term, a brief video tutorial is available [here] (https://naveen17797.github.io/)
-* Follow the steps in this [blog] (https://naveen17797.github.io/) which is also powered by crow, in case of any doubts, bugs, or vulnerabilities feel free to open a issue, or even send a patch through pull request.
+* To setup crow web client you need to generate a github user access token with scope public_repo (dont panic if you have never heard the term, a brief video tutorial is available [here](https://naveen17797.github.io/)
+* Follow the steps in this [blog](https://naveen17797.github.io/) which is also powered by crow, in case of any doubts, bugs, or vulnerabilities feel free to open a issue, or even send a patch through pull request.
 
 ### SCREENSHOTS FROM CROW-WEB-CLIENT
 #### SET SITE SETTINGS
